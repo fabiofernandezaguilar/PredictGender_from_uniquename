@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 
 # Archivo de entrada
-archivo_entrada = 'data_in/nombres_unicos.csv'
+archivo_entrada = '00data_in/nombres_unicos.csv'
 currentDate = datetime.now().strftime("%Y%m%d%H%M%S")
 
 # --- DICCIONARIOS ---
@@ -173,8 +173,8 @@ try:
         df_desconocidos.sort_values(by=['metodo_asignacion', 'GENERO', 'nombre_original'], inplace=True)
 
         # 3. Guardar el archivo de desconocidos
-        if not os.path.exists('data_out'):
-            os.makedirs('data_out')
+        if not os.path.exists('01data_out'):
+            os.makedirs('01data_out')
         outfilename_desconocidos = f'{currentDate}_desconocidos_resultados.csv'
         df_desconocidos[['nombre_original', 'GENERO', 'metodo_asignacion']].to_csv(
             f'data_out/{outfilename_desconocidos}',
@@ -200,8 +200,8 @@ try:
     # Guardar el resultado principales
     if not os.path.exists('data_out'):
         os.makedirs('data_out')
-    outfilename = f'{currentDate}_resultados.csv'
-    df[['nombre_original', 'GENERO', 'metodo_asignacion']].to_csv(f'data_out/{outfilename}', sep=',', index=False, encoding='utf-8-sig') # utf-8-sig para Excel
+    outfilename = f'{currentDate}_resultados_completos.csv'
+    df[['nombre_original', 'GENERO', 'metodo_asignacion']].to_csv(f'01data_out/{outfilename}', sep=',', index=False, encoding='utf-8-sig') # utf-8-sig para Excel
 
     print(f'✅ Proceso finalizado. Archivo {outfilename} generado')
 
