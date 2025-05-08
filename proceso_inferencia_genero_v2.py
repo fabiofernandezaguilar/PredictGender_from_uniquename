@@ -66,9 +66,12 @@ def inferir_genero(nombre):
                 return 'masculino', 'heuristica_fallback'
 
 # Aplicar inferencia
-df[['genero_asignado', 'metodo_asignacion']] = df['nombre_normalizado'].apply(lambda x: pd.Series(inferir_genero(x)))
+df[['GENERO', 'metodo_asignacion']] = df['nombre_normalizado'].apply(lambda x: pd.Series(inferir_genero(x)))
+
+#CurrentDate
+currentDate = datatime.nom().strftime("%Y%m%d%H%M%S")
 
 # Guardar el resultado
-df[['nombre_original', 'genero_asignado', 'metodo_asignacion']].to_csv('resultado_con_genero_v3-1.csv', index=False)
+df[['nombre_original', 'GENERO', 'metodo_asignacion']].to_csv(currentDate + "_resultado_genero.csv", index=False)
 
 print("✅ Proceso finalizado. Archivo generado: resultado_con_genero_final.csv")
