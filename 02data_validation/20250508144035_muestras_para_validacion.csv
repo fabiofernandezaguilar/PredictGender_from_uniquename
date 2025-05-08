@@ -1,0 +1,31 @@
+﻿nombre_original,GENERO,metodo_asignacion,GENERO_VALIDADO
+amy johana,femenino,heuristica_ultimonombre_f,femenino
+marcela carolina,femenino,heuristica_terminacion_f,femenino
+kimberly yanzel,femenino,dic_primer_nombre,femenino
+brenda valeska,femenino,heuristica_terminacion_f,femenino
+francheska paola,femenino,heuristica_terminacion_f,femenino 
+susana abigail,femenino,heuristica_terminacion_f,femenino
+yesley alina,femenino,heuristica_ultimonombre_f,femenino
+meydeline sofia,femenino,dic_ultimo_nombre,femenino
+elvia patricia,femenino,heuristica_terminacion_f,femenino
+tifanny paulina,femenino,heuristica_ultimonombre_f,femenino
+jose evelio,masculino,dic_primer_nombre,masculino
+dayan vanessa,masculino,heuristica_terminacion_m,femenino
+francisco isidro,masculino,dic_primer_nombre,masculino
+salatiel,masculino,heuristica_terminacion_m,masculino
+franz esteban,masculino,dic_ultimo_nombre,masculino
+cristian julian,masculino,dic_primer_nombre,masculino
+harol johanes,masculino,heuristica_terminacion_m,masculino
+ian dariel,masculino,heuristica_terminacion_m,masculino
+danilo isabel,masculino,heuristica_terminacion_m,masculino
+vidal fabricio,masculino,heuristica_ultimonombre_m,masculino
+enaudi,desconocido,sin_regla_clara,unisex
+danny andrey,desconocido,sin_regla_clara,masculino
+joab ancelmi,desconocido,sin_regla_clara,mas
+danny jafet,desconocido,sin_regla_clara,mas
+jacqueline stephani,desconocido,sin_regla_clara, femenino
+yamilt,desconocido,sin_regla_clara, masculino
+roy efren,desconocido,sin_regla_clara,masculino
+silki,desconocido,sin_regla_clara,femenino
+yenkell esthiff,desconocido,sin_regla_clara,masculino
+anette marie,desconocido,sin_regla_clara,femenino

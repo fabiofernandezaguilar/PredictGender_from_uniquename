@@ -1,10 +1,10 @@
 #Ejecuta el Script:
 #-------------------------------------------------------------
 #Abre una terminal o línea de comandos, navega al directorio del proyecto y ejecuta:
-#python3 03_ground_truth.py
+#python3 03ground_truth.py
 
 #Puedes también usar los argumentos si tus carpetas se llaman diferente:
-#python3 03_ground_truth.py --validation_dir mi_carpeta_de_validacion --output_dir mi_carpeta_de_metricas
+#python3 03ground_truth.py --validation_dir mi_carpeta_de_validacion --output_dir mi_carpeta_de_metricas
 
 #-------------------------------------------------------------
 #¿Qué hace el script?
@@ -163,28 +163,34 @@ def calcular_y_guardar_metricas(archivo_validacion, directorio_salida_metricas):
         print(f"❌ Error al guardar el archivo de métricas '{ruta_archivo_salida}': {e}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Calcula métricas de clasificación a partir de un archivo de validación manual.")
-    parser.add_argument(
-        "--validation_dir",
-        type=str,
-        default="02data_validation",
-        help="Directorio donde se encuentra el archivo de validación completado (por defecto: 02data_validation)."
-    )
-    parser.add_argument(
-        "--output_dir",
-        type=str,
-        default="03_ground_truth",
-        help="Directorio donde se guardarán las métricas calculadas (por defecto: 03_ground_truth)."
-    )
+    try:
+        parser = argparse.ArgumentParser(description="Calcula métricas de clasificación a partir de un archivo de validación manual.")
+        parser.add_argument(
+            "--validation_dir",
+            type=str,
+            default="02data_validation",
+            help="Directorio donde se encuentra el archivo de validación completado (por defecto: 02data_validation)."
+        )
+        parser.add_argument(
+            "--output_dir",
+            type=str,
+            default="03ground_truth",
+            help="Directorio donde se guardarán las métricas calculadas (por defecto: 03ground_truth)."
+        )
 
-    args = parser.parse_args()
+        args = parser.parse_args()
 
-    archivo_validacion_seleccionado = encontrar_archivo_validacion_mas_reciente(args.validation_dir)
+        archivo_validacion_seleccionado = encontrar_archivo_validacion_mas_reciente(args.validation_dir)
 
-    if archivo_validacion_seleccionado:
-        print(f"ℹ️ Usando el archivo de validación más reciente: '{archivo_validacion_seleccionado}'")
-        calcular_y_guardar_metricas(archivo_validacion_seleccionado, args.output_dir)
-    else:
-        print("🚫 No se pudo proceder sin un archivo de validación.")
+        if archivo_validacion_seleccionado:
+            print(f"ℹ️ Usando el archivo de validación más reciente: '{archivo_validacion_seleccionado}'")
+            calcular_y_guardar_metricas(archivo_validacion_seleccionado, args.output_dir)
+        else:
+            print("🚫 No se pudo proceder sin un archivo de validación.")
 
-    print("🔄 Proceso de cálculo de métricas terminado.")
+       
+    except Exception as error:
+        print(f"❌ Error inesperado: {error}")
+    finally:
+        print("🔄 Proceso de cálculo de métricas terminado.")
+

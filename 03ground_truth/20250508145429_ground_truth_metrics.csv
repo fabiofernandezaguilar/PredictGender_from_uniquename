@@ -1,0 +1,30 @@
+﻿Metricas de Evaluacion para el archivo: 20250508144035_muestras_para_validacion.csv
+Fecha de generacion de metricas: 2025-05-08 14:54:29
+Total de registros validados: 30
+Accuracy General: 0.6000
+
+Reporte de Clasificacion:
+,precision,recall,f1-score,support
+ femenino,0.0,0.0,0.0,1.0
+ masculino,0.0,0.0,0.0,1.0
+desconocido,0.0,0.0,0.0,0.0
+femenino,0.9,0.75,0.8181818181818182,12.0
+femenino ,0.0,0.0,0.0,1.0
+mas,0.0,0.0,0.0,2.0
+masculino,0.9,0.75,0.8181818181818182,12.0
+unisex,0.0,0.0,0.0,1.0
+accuracy,0.6,0.6,0.6,0.6
+macro avg,0.225,0.1875,0.20454545454545456,30.0
+weighted avg,0.7200000000000001,0.6,0.6545454545454545,30.0
+
+
+Matriz de Confusion:
+,Predicted:  femenino,Predicted:  masculino,Predicted: desconocido,Predicted: femenino,Predicted: femenino ,Predicted: mas,Predicted: masculino,Predicted: unisex
+Actual:  femenino,0,0,1,0,0,0,0,0
+Actual:  masculino,0,0,1,0,0,0,0,0
+Actual: desconocido,0,0,0,0,0,0,0,0
+Actual: femenino,0,0,2,9,0,0,1,0
+Actual: femenino ,0,0,0,1,0,0,0,0
+Actual: mas,0,0,2,0,0,0,0,0
+Actual: masculino,0,0,3,0,0,0,9,0
+Actual: unisex,0,0,1,0,0,0,0,0
